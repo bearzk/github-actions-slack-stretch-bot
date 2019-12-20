@@ -1,0 +1,1 @@
+curl -X POST --data-urlencode "payload={\"channel\": \"#notifications\", \"link_names\": 1, \"username\": \"healthbot\", \"text\": \"@bearzk @miaozi Stand up and do this :ok_woman:! Be Happy! -- HappyTiger\", \"icon_emoji\": \":tiger2:\"}" $stretch_bot_slack_endpoint
