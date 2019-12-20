@@ -1,0 +1,25 @@
+name: v2ex redeem
+
+on: [push]
+  # schedule:
+    # - cron: "0 7 * * *"
+
+jobs:
+  redeem:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+
+    - run: npm install
+
+    - name: redeem v2ex coins then slack
+      env:
+        STRETCH_BOT_SLACK_ENDPOINT: ${{ secrets.STRETCH_BOT_SLACK_ENDPOINT }}
+        V2EX_A2: ${{ secrets.V2EX_A2 }}
+        V2EX_A2O: ${{ secrets.V2EX_A2O }}
+        V2EX_PB3_SESSION: ${{ secrets.V2EX_PB3_SESSION }}
+        V2EX_TAB: ${{ secrets.V2EX_TAB }}
+      run: node v2exRedeem/index.js 
+
