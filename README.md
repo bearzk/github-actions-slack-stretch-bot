@@ -1,7 +1,7 @@
-Github Actions Slack Stretch Bot
+Github Actions Triggered Jobs
 ====
 
-This repo uses github actions to send messages to slack.
+This repo uses github actions to do jobs on schedule.
 
 github actions
 ----
