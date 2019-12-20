@@ -1,0 +1,14 @@
+name: stretch bot
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: send message to slack with curl
+      run: curl http://checkip.amazonaws.com/
+    
