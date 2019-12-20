@@ -6,7 +6,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -15,5 +14,4 @@ jobs:
       env:
         stretch_bot_slack_endpoint: ${{ secrets.STRETCH_BOT_SLACK_ENDPOINT }}
       run: sh ./stretch_bot.sh
-      # run: echo $stretch_bot_slack_endpoint
-    
+
