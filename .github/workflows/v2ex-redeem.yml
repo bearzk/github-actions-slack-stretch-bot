@@ -1,8 +1,8 @@
 name: v2ex redeem
 
-on: [push]
-  # schedule:
-    # - cron: "0 7 * * *"
+on:
+  schedule:
+    - cron: "0 7 * * *"
 
 jobs:
   redeem:
