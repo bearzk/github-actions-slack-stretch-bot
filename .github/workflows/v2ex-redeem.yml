@@ -3,6 +3,9 @@ name: v2ex redeem
 on:
   schedule:
     - cron: "0 7 * * *"
+  push:
+    branches:
+      - master
 
 jobs:
   redeem:
