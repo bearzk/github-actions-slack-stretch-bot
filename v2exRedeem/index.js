@@ -15,7 +15,7 @@ const getIp = async () => {
   return res.data;
 };
 
-const slackIt = text => {
+const slackIt = async (text) => {
   const ip = await getIp();
   const payload = {
     text: `${text} -- from ${ip}`,
@@ -39,7 +39,7 @@ const sign = async () => {
 
   let redeemLinkMatch = res.data.match(/\/mission\/daily\/redeem\?once=\d+/);
   if (!redeemLinkMatch) {
-    slackIt('already redeemed today');
+    await slackIt('already redeemed today');
     return;
   }
   let redeemLink = redeemLinkMatch[0];
@@ -50,11 +50,11 @@ const sign = async () => {
 
   let worked = redeemRes.data.match(/成功领取/);
   if (!worked) {
-    slackIt('somehow not worked :broken_heart:');
+    await slackIt('somehow not worked :broken_heart:');
     return;
   }
 
-  slackIt('redeem worked :ok_hand:');
+  await slackIt('redeem worked :ok_hand:');
 };
 
 sign();
