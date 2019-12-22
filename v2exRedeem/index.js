@@ -10,9 +10,15 @@ const cookiesString = Object.entries(config.cookies)
   })
   .join('');
 
+const getIp = async () => {
+  const res = await axios.get('http://checkip.amazonaws.com/');
+  return res.data;
+};
+
 const slackIt = text => {
+  const ip = await getIp();
   const payload = {
-    text,
+    text: `${text} -- from ${ip}`,
     channel: '#notifications',
     username: 'v2exRedeemBot'
   };
