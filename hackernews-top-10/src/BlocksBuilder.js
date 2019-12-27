@@ -75,6 +75,8 @@ class BlocksBuilder {
       blocks.push(this.block(entry));
     })
 
+    console.log(blocks);
+
     return blocks.flat();
   }
 }
