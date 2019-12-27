@@ -1,3 +1,8 @@
+// system imports
+// 3rd party imports
+const _ = require('lodash');
+// local imports
+
 class BlocksBuilder {
   _header(type) {
     return {
@@ -75,9 +80,7 @@ class BlocksBuilder {
       blocks.push(this.block(entry));
     })
 
-    console.log(blocks);
-
-    return blocks.flat();
+    return _.flatten(blocks);
   }
 }
 
