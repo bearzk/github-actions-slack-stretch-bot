@@ -2,7 +2,7 @@ name: hackernew latest 10
 
 on:
   schedule:
-    - cron: "0 5/17 * * *"
+    - cron: "0 5,17 * * *"
   push:
     branches:
       - master
