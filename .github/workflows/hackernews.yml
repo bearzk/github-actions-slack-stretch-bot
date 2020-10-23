@@ -1,4 +1,4 @@
-name: hackernew latest 10
+name: hackernews latest 10
 
 on:
   schedule:
