@@ -8,7 +8,7 @@ class BlocksBuilder {
     return {
       type: 'section',
       text: {
-        type: 'plain_text',
+        type: 'mrkdwn',
         text: `*${type}* news from hackernews`,
       }
     }
