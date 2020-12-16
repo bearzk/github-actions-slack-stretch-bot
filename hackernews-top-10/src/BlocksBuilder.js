@@ -6,7 +6,7 @@ const _ = require('lodash');
 class BlocksBuilder {
   _header(type) {
     return {
-      type: 'section',
+      type: 'mrkdwn',
       text: {
         type: 'plain_text',
         text: `*${type}* news from hackernews`,
